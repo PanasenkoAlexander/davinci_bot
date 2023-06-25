@@ -5,7 +5,7 @@ import dotenv
 
 dotenv.load_dotenv()
 openai.api_key = os.environ.get('API_KEY')
-token = os.environ.get('BOT_TOKEN')
+token = os.environ['BOT_TOKEN']
 bot = telebot.TeleBot(token)
 
 
