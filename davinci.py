@@ -3,9 +3,9 @@ import telebot
 import os
 import dotenv
 
-dotenv.load_dotenv('.env')
-openai.api_key = os.environ['api_key']
-token = os.environ['bot_token']
+dotenv.load_dotenv()
+openai.api_key = os.environ.get('api_key')
+token = os.environ.get('bot_token')
 bot = telebot.TeleBot(token)
 
 
